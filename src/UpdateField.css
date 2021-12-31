@@ -1,0 +1,21 @@
+
+.updateField {
+    display: flex;
+}
+
+.updateFieldButton {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    box-shadow: none !important;    /* no blue outline */
+}
+
+.updateFieldForm {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: none !important;    /* no blue outline */
+}
+
+.closeUpdateFieldButton {
+    margin-left: 10px;
+    box-shadow: none !important;    /* no blue outline */
+}

@@ -1,0 +1,21 @@
+
+.dataLoadTable{
+    width: 70%;
+    min-width: 800px;
+    margin: auto;
+}
+
+.DLTButton {
+    background-color: var(--headColor) !important;
+    border: none !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    align-items: center !important;
+    place-content: center !important;
+    box-shadow: none !important;    /* no blue outline */
+}
+
+.DLTButton:active {
+    background-color: rgb(75, 30, 115) !important;
+    transform: scale(1.05);
+}

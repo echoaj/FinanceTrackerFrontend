@@ -1,0 +1,40 @@
+:root {
+    --headColor: rgb(62, 6, 116);
+}
+
+.tableView{
+    padding-top: 4rem;
+}
+
+thead tr{
+    padding-left: 20px !important;
+}
+
+th, td{
+    padding: 4px 35px !important;
+}
+
+td {
+    color: rgb(90, 90, 90) !important;
+}
+
+thead tr th{
+    color: rgb(255, 255, 255);
+    background-color: var(--headColor) !important;
+}
+
+thead{
+    border: none !important;
+}
+
+tbody{
+    border-top-color: var(--headColor) !important;
+}
+
+img {
+    margin-right: 15px;
+}
+
+img:hover{
+    transform: scale(1.2);
+}

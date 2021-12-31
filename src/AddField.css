@@ -1,0 +1,15 @@
+.addField {
+    display: flex;
+}
+
+.addFieldButton {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    box-shadow: none !important;    /* no blue outline */
+}
+
+.addFieldForm {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: none !important;    /* no blue outline */
+}
