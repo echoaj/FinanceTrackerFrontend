@@ -103,6 +103,8 @@ class DataLoadTable extends Component {
                     {element}
                     <br />
                     <Button className="DLTButton" onClick={this.getExpenses}>Refresh</Button>
+                    <br />
+                    <br />
                 </div>
             );
         }
