@@ -6,7 +6,7 @@ class App extends Component {
 
   render() {
     return <div class="App">
-              <h1><b>Finance Tracker</b></h1>
+              <h2><b>Finance Tracker</b></h2>
               <DataLoadTable refreshRate={60} />
             </div>;
   }
