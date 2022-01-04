@@ -1,5 +1,5 @@
 .LoadIcon {
-    height: 80vh;  /* Make div height of screen */
+    height: 50vh;  /* Make div height of screen */
     display: grid;
     justify-content: center; 
     align-content: center;

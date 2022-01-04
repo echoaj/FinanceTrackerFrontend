@@ -20,6 +20,7 @@ class DataLoadTable extends Component {
             idToUpdate: null
         };
         axios.defaults.baseURL = "https://finance-tracker-jsb.herokuapp.com";
+        // axios.defaults.baseURL = "http://localhost:8080/";
         this.getExpenses = this.getExpenses.bind(this);
         this.postExpense = this.postExpense.bind(this);
         this.deleteExpense = this.deleteExpense.bind(this);

@@ -5,7 +5,10 @@ import DataLoadTable from './DataLoadTable';
 class App extends Component {
 
   render() {
-    return <DataLoadTable refreshRate={60}/>
+    return <div class="App">
+              <h1><b>Finance Tracker</b></h1>
+              <DataLoadTable refreshRate={60} />
+            </div>;
   }
 
 }

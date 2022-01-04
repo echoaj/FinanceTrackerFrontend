@@ -18,7 +18,7 @@ class TableView extends Component {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>ID</th>
+                            <th class="id-toggle">ID</th>
                             <th>Item</th>
                             <th>Edit</th>
                         </tr>
@@ -27,7 +27,7 @@ class TableView extends Component {
                         {this.props.data.map((elem, i) =>
                             <tr key={elem.id}>
                                 <td>{i + 1}</td>
-                                <td>{elem.id}</td>
+                                <td class="id-toggle">{elem.id}</td>
                                 <td>{elem.item}</td>
                                 <td>
                                     <img src={edit} alt="Edit Icon" onClick={() => this.props.setId(elem.id)} />
