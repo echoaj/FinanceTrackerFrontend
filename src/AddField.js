@@ -14,6 +14,7 @@ class AddField extends Component {
 
     // Post expense when the form is submited
     async handlePost(event) {
+        console.log("Add Button Pressed: " + this.state.data["item"]);
         await this.props.addExpense(this.state.data);       // Calls postExpense() and sends it expense object
         this.setState({ data: { "item": "" } });            // Clearing data so no expense object
         event.preventDefault();
@@ -21,8 +22,10 @@ class AddField extends Component {
 
     // Update state when the user types in the expense item
     handleChange(event) {
+        console.log("Received: " + event.target.value);
         const expense = { "item": event.target.value };     // Expense Data
         this.setState({ data: expense });                   // Setting state to object holding expense data
+        console.log("State: " + this.state.data["item"]);
     }
 
     render() {

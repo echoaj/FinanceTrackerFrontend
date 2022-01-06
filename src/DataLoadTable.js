@@ -20,7 +20,7 @@ class DataLoadTable extends Component {
             idToUpdate: null
         };
         axios.defaults.baseURL = "https://finance-tracker-jsb.herokuapp.com";
-        // axios.defaults.baseURL = "http://localhost:8080/";
+        //axios.defaults.baseURL = "http://localhost:8080/";
         this.getExpenses = this.getExpenses.bind(this);
         this.postExpense = this.postExpense.bind(this);
         this.deleteExpense = this.deleteExpense.bind(this);
@@ -45,6 +45,7 @@ class DataLoadTable extends Component {
     };
 
     async postExpense(expense) {
+        console.log(expense["item"] + " Data Reviced");
         try {
             var res = await axios.post(`/api/expense/`, expense);
             if (res.data === true) {
