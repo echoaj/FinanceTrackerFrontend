@@ -89,7 +89,7 @@ class DataLoadTable extends Component {
     render() {
         if (this.state.expenses === null) {
             return (
-                <LoadIcon />
+                <LoadIcon/>
             );
         } else {
             let element
