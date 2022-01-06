@@ -35,6 +35,10 @@ img:hover{
     transform: scale(1.2);
 }
 
+caption {
+    color: #212529 !important;
+}
+
 @media only screen and (max-width: 800px) {
     .id-toggle {
         display: none;
