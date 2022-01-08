@@ -1,12 +1,14 @@
 # Finance Tracker
 
-An application that allows users to keep track of their expenses.
-The client retrieves information through a REST API.
+An CRUD application for users to keep of their expenses.  Uses spring boot for the backend API, React as the frontend, and mongoDB as the database.
+
+![Client View](public/financeTracker.PNG)
 
 ## Built With:
-### React.js
-### Java Spring Boot
-### MongoDB
+#### React.js
+#### Java Spring Boot
+#### MongoDB
+
 
 ## Deployed On:
-### Heroku
+#### Heroku
