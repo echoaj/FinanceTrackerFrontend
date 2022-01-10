@@ -15,7 +15,7 @@ const logger = createLogger({
             format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss: ' }), customFormat),
         }),
         new transports.Http({
-            'host': 'localhost', 'port': 5000, 'path': '/api/logger',
+            'host': 'logging-service-py.herokuapp.com', 'path': '/api/logger',
             format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss' }), customFormat),
         })
         // new transports.File({ filename: 'combined.log', level: 'debug' })
