@@ -6,7 +6,7 @@ import log from './logger';
 class App extends Component {
 
   render() {
-    log("Testing Complete.  Everything Works!");
+    log("App Started");
     return <div className="App">
               <h2><b>Finance Tracker</b></h2>
               <DataLoadTable refreshRate={60} />
