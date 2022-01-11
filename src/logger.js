@@ -14,10 +14,13 @@ const logger = createLogger({
             colorize: true,
             format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss: ' }), customFormat),
         }),
-        new transports.Http({
-            'host': 'logging-service-py.herokuapp.com', 'port':'', 'path': '/api/logger',
-            format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss' }), customFormat),
-        }),
+        // new transports.Http({
+        //     'host': 'logging-service-py.herokuapp.com', 'port':'', 'path': '/api/logger',
+        //     format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss' }), customFormat),
+        // }),
+        // new HttpStreamTransport({
+        //     url: 'https://logging-service-py.herokuapp.com/api/logger'
+        //   })
         // new transports.Http({
         //     'host': 'localhost', 'port':"5000", 'path': '/api/logger',
         //     format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss' }), customFormat),
