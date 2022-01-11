@@ -1,32 +1,36 @@
-import { createLogger, format, transports } from "winston";
-const { combine, timestamp, printf } = format;
+import axios from 'axios';
 
+var time = new Date();
 
-const customFormat = printf(({ level, message, timestamp }) => {
-    return `${timestamp} ${level.toUpperCase()}: ${message}`;
-});
+const getFormattedTime = function () {
+    const year = time.getFullYear();
+    const month = time.getMonth() + 1;
+    const day = time.getDate();
+    const hour = time.getHours();
+    const minute = time.getMinutes();
+    const second = time.getSeconds();
+    const date = `${month}/${day}/${year}`;
+    const curTime = `${hour}:${minute}:${second}`;
+    return [date, curTime];
+};
 
-const logger = createLogger({
-    level: "debug",
+const log = function (string, oneline=false) {
+    const timestamp = getFormattedTime();
+    const baseURL = "https://logging-service-py.herokuapp.com";
+    const endpoint = "/api/logger";
+    const url = baseURL + endpoint;
+    let payload = {};
 
-    transports: [
-        new transports.Console({
-            colorize: true,
-            format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss: ' }), customFormat),
-        }),
-        // new transports.Http({
-        //     'host': 'logging-service-py.herokuapp.com', 'port':'', 'path': '/api/logger',
-        //     format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss' }), customFormat),
-        // }),
-        // new HttpStreamTransport({
-        //     url: 'https://logging-service-py.herokuapp.com/api/logger'
-        //   })
-        // new transports.Http({
-        //     'host': 'localhost', 'port':"5000", 'path': '/api/logger',
-        //     format: combine(timestamp({ format: 'MM/DD/YYYY hh:mm:ss' }), customFormat),
-        // })
-        // new transports.File({ filename: 'combined.log', level: 'debug' })
-    ]
-});
+    if (oneline) {
+        const key = timestamp[0] + " " + timestamp[1];
+        payload[key] = string;
+    } else {
+        payload["Date"] = timestamp[0];
+        payload["Time"] = timestamp[1];
+        payload["Log"] = string;
+    }
 
-export default logger;
+    axios.post(url, payload);
+};
+
+export default log;

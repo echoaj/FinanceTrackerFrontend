@@ -19,8 +19,6 @@ class DataLoadTable extends Component {
             fieldType: "post",
             idToUpdate: null
         };
-        axios.defaults.baseURL = "https://logging-service-py.herokuapp.com/";
-        axios.post(`/api/logger`, {"LOG": "FROM AXIOS FROM Website"});
         axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
         this.getExpenses = this.getExpenses.bind(this);
         this.postExpense = this.postExpense.bind(this);

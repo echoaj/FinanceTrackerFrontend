@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import DataLoadTable from './DataLoadTable';
-import logger from './logger';
+import log from './logger';
 
 
 class App extends Component {
 
   render() {
-    logger.debug("FINAL TEST TODAY.  PLEASE WORK!");
+    log("Testing Complete.  Everything Works!");
     return <div className="App">
               <h2><b>Finance Tracker</b></h2>
               <DataLoadTable refreshRate={60} />
