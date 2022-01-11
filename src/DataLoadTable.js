@@ -7,6 +7,7 @@ import UpdateField from './UpdateField';
 import axios from 'axios';
 import './DataLoadTable.css';
 import './App.css';
+import log from './logger';
 
 
 

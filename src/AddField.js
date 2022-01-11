@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import "./AddField.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import log from './logger';
 
 class AddField extends Component {
 
