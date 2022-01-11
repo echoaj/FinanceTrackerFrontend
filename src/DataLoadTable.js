@@ -34,7 +34,7 @@ class DataLoadTable extends Component {
     componentDidMount() {
         log("componentDidMount CALLED AFTER RENDER: Data loaded from endpoint: refreshes screen every n seconds");
         this.getExpenses();
-        setInterval(this.getExpenses, this.props.refreshRate * 1000);
+        // setInterval(this.getExpenses, this.props.refreshRate * 1000);
     }
 
     async getExpenses() {
