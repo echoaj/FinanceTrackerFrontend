@@ -53,7 +53,7 @@ class DataLoadTable extends Component {
             var res = await axios.post(`/api/expense/`, expense);
             if (res.data === true) {
                 this.getExpenses();
-                log("postExpenses: post data to API");
+                log("postExpenses: post data to API: ADDING POST SUCCESSFULL");
             }
         } catch (err) {
             console.log(err);

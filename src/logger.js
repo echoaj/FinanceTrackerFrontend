@@ -14,7 +14,7 @@ const getFormattedTime = function () {
     return [date, curTime];
 };
 
-const log = function (string, oneline=false) {
+const log = function (string, oneline=true) {
     const timestamp = getFormattedTime();
     const baseURL = "https://logging-service-py.herokuapp.com";
     const endpoint = "/api/logger";

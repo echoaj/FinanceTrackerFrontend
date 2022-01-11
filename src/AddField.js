@@ -16,7 +16,7 @@ class AddField extends Component {
 
     // Post expense when the form is submited
     async handlePost(event) {
-        log("handlePost: called when add form submitted");
+        log("handlePost: called when add form submitted ADD BUTTON PRESSED!!!");
         console.log("Add Button Pressed: " + this.state.data["item"]);
         await this.props.addExpense(this.state.data);       // Calls postExpense() and sends it expense object
         this.setState({ data: { "item": "" } });            // Clearing data so no expense object
