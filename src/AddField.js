@@ -34,7 +34,7 @@ class AddField extends Component {
     }
 
     render() {
-        log("render: add feild rendered");
+        log("render: add field rendered");
         const valueItem = this.state.data.item;
         const isEmpty = valueItem === "";
         return (
