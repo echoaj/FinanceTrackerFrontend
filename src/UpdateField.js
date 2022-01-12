@@ -15,7 +15,7 @@ class UpdateField extends Component {
     // Put expense when the form is submited
     async handlePut(event) {
         event.preventDefault();
-        log("handlePut: called when add form submitted UPDATE BUTTON PRESSED!!!");
+        log("handlePut: called when update form submitted UPDATE BUTTON PRESSED!!!");
         await this.props.updateExpense(this.state.data);
         this.setState({ data: { "item": "" } });
         this.props.changeFieldTo("post");
