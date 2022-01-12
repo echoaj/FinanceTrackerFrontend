@@ -41,14 +41,14 @@ class DataLoadTable extends Component {
         try {
             var res = await axios.get('/api/expense');
             this.setState({ expenses: res.data });
-            log("getExpenses: reload API data for Table");
+            log("getExpenses: reload API data for table");
         } catch (err) {
             console.log(err);
         }
     };
 
     async postExpense(expense) {
-        console.log(expense["item"] + " Data Reviced");
+        console.log(expense["item"] + " Data Received");
         try {
             var res = await axios.post(`/api/expense/`, expense);
             if (res.data === true) {
@@ -91,13 +91,13 @@ class DataLoadTable extends Component {
     }
 
     changeFieldType(type) {
-        log("changeFieldType CALLED FROM CLOSE BUTTON IN UpdateField.js: set id to post, put .. dictatates what is rendered");
+        log("changeFieldType CALLED FROM CLOSE BUTTON IN UpdateField.js: set id to post, put .. dictates what is rendered");
         this.setState({ fieldType: type });
     }
 
     render() {
         if (this.state.expenses === null) {
-            log("render: reload icon rednered");
+            log("render: reload icon rendered");
             return (
                 <LoadIcon />
             );

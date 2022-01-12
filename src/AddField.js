@@ -30,7 +30,6 @@ class AddField extends Component {
         console.log("Received: " + event.target.value);
         const expense = { "item": event.target.value };     // Expense Data
         this.setState({ data: expense });                   // Setting state to object holding expense data
-        console.log("State: " + this.state.data["item"]);
     }
 
     render() {
