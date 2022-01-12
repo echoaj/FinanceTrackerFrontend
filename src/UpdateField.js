@@ -17,6 +17,7 @@ class UpdateField extends Component {
         event.preventDefault();
         await this.props.updateExpense(this.state.data);
         this.setState({ data: { "item": "" } });
+        this.props.changeFieldTo("post");
     }
 
     // Update state when the user types in the expense item
