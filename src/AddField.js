@@ -16,11 +16,12 @@ class AddField extends Component {
 
     // Post expense when the form is submited
     async handlePost(event) {
+        event.preventDefault();                             // Prevents browser from refreshing after function is done
         log("handlePost: called when add form submitted ADD BUTTON PRESSED!!!");
         console.log("Add Button Pressed: " + this.state.data["item"]);
         await this.props.addExpense(this.state.data);       // Calls postExpense() and sends it expense object
         this.setState({ data: { "item": "" } });            // Clearing data so no expense object
-        event.preventDefault();
+        log("handlePost: POST SENT TO postExpense!!!");
     }
 
     // Update state when the user types in the expense item
@@ -37,7 +38,7 @@ class AddField extends Component {
         const valueItem = this.state.data.item;
         const isEmpty = valueItem === "";
         return (
-            <form className="addField" onSubmit={this.handlePost}>
+            <form className="addField" onSubmit={this.handlePost} action="#">
                 <Form.Control className="addFieldForm" type="text" placeholder="Add Item" value={valueItem} onChange={this.handleChange} />
                 <Button className="addFieldButton" type="submit" variant="success" disabled={isEmpty}>Add</Button>
             </form>
