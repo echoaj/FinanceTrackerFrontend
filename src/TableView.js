@@ -4,13 +4,12 @@ import "./TableView.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import trash from './trash.svg';
 import edit from './edit.svg';
-// import add from './add.svg';
-
+import log from './logger';
 
 class TableView extends Component {
 
     render() {
-        // const tableSize = Object.keys(this.props.data).length;
+        log("render: TableView rendered")
         return (
             <div className="tableView">
                 <Table striped hover variant="light" size="sm">
@@ -32,7 +31,6 @@ class TableView extends Component {
                                 <td>
                                     <img src={edit} alt="Edit Icon" onClick={() => this.props.setId(elem.id)} />
                                     <img src={trash} alt="Trash Icon" onClick={() => this.props.deleteRow(elem.id)} />
-                                    {/*{i + 1 === tableSize ? <img src={add} alt="Add Icon" /> : ""}*/  /*Adds + sign to last table row*/}
                                 </td>
                             </tr>
                         )}

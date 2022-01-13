@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import "./UpdateField.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import log from './logger';
 
 class UpdateField extends Component {
 
@@ -30,6 +31,7 @@ class UpdateField extends Component {
     }
 
     render() {
+        log("render: update field rendered")
         const valueItem = this.state.data.item;
         const isEmpty = valueItem === "";
         return (
